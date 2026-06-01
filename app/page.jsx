@@ -12,28 +12,42 @@ export default function Home() {
     }}>
 
       {/* HERO */}
-      <div style={{ textAlign: "center", marginBottom: "50px" }}>
-        <h1 style={{
-          fontSize: "48px",
-          color: "#ef4444",
-          marginBottom: "10px"
-        }}>
+      <div style={{ textAlign: "center", marginBottom: "40px" }}>
+        <h1 style={{ color: "#ef4444", fontSize: "40px" }}>
           🔥 Burst Arena
         </h1>
 
-        <p style={{
-          color: "#aaa",
-          fontSize: "18px"
-        }}>
+        <p style={{ color: "#aaa" }}>
           Enter the Arena. Compete. Dominate.
         </p>
-      </div>
 
-      {/* BUTTON */}
-      <div style={{ textAlign: "center", marginBottom: "40px" }}>
         <Link href="/play">
           <button style={{
             background: "#ef4444",
-            padding: "16px 28px",
-            borderRadius: "10px",
+            padding: "12px 24px",
+            borderRadius: "8px",
             border: "none",
+            color: "white",
+            cursor: "pointer",
+            marginTop: "20px"
+          }}>
+            ⚔️ Play Now
+          </button>
+        </Link>
+      </div>
+
+      {/* TWITCH */}
+      <div style={{ marginTop: "40px" }}>
+        <h2>🔴 Live Stream</h2>
+
+        <iframe
+          src="https://player.twitch.tv/?channel=burstlegacy&parent=burst-arena-vw2s.vercel.app&parent=vercel.app"
+          height="400"
+          width="100%"
+          allowFullScreen
+        ></iframe>
+      </div>
+
+    </div>
+  );
+}
