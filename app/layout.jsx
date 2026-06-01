@@ -1,35 +1,63 @@
 "use client";
 
-import "./globals.css";
-import { AnimatePresence, motion } from "framer-motion";
-import { usePathname } from "next/navigation";
-import Navbar from "@/components/Navbar";
+import Link from "next/link";
 
 export default function Layout({ children }) {
-  const pathname = usePathname();
-
   return (
     <html>
       <body style={{
-  backgroundColor: "#0A0A0A",
-  color: "white",
-  fontFamily: "Arial, sans-serif",
-  margin: 0
-}}>
-        <Navbar />
+        margin: 0,
+        fontFamily: "Arial",
+        background: "#0A0A0A",
+        color: "white"
+      }}>
+        <div style={{ display: "flex" }}>
 
-        <AnimatePresence mode="wait">
-          <motion.div
-            key={pathname}
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            exit={{ opacity: 0, y: -20 }}
-            transition={{ duration: 0.4 }}
-          >
+          {/* SIDEBAR */}
+          <div style={{
+            width: "220px",
+            height: "100vh",
+            background: "#111",
+            padding: "20px",
+            borderRight: "1px solid #222"
+          }}>
+
+            <h2 style={{ color: "#ef4444" }}>
+              🔥 Burst Arena
+            </h2>
+
+            <div style={{ marginTop: "30px", display: "flex", flexDirection: "column", gap: "15px" }}>
+              <SidebarLink href="/play" label="⚔️ Play" />
+              <SidebarLink href="/tournaments" label="🏆 Tournaments" />
+              <SidebarLink href="/leaderboard" label="🥊 Leaderboard" />
+              <SidebarLink href="/profile" label="👤 Profile" />
+              <SidebarLink href="/settings" label="⚙️ Settings" />
+            </div>
+
+          </div>
+
+          {/* MAIN CONTENT */}
+          <div style={{ flex: 1, padding: "40px" }}>
             {children}
-          </motion.div>
-        </AnimatePresence>
+          </div>
+
+        </div>
       </body>
     </html>
+  );
+}
+
+function SidebarLink({ href, label }) {
+  return (
+    <Link href={href}>
+      <div style={{
+        padding: "10px",
+        borderRadius: "8px",
+        cursor: "pointer",
+        transition: "0.2s",
+      }}>
+        {label}
+      </div>
+    </Link>
   );
 }
