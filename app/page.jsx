@@ -16,6 +16,18 @@ export default function Home() {
           🔥 Burst Arena
         </h1>
 
+        {/* TWITCH STREAM */}
+<div style={{ marginTop: "40px", textAlign: "center" }}>
+  <h2 style={{ marginBottom: "10px" }}>🔴 Live Stream</h2>
+
+  <iframe
+    src="https://player.twitch.tv/?channel=burstlegacy&parent=burst-arena-vw2s.vercel.app"
+    height="400"
+    width="100%"
+    allowFullScreen
+  ></iframe>
+</div>
+        
         <p style={{ color: "#aaa", marginBottom: "20px" }}>
           Enter the Arena. Compete. Dominate.
         </p>
