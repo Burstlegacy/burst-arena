@@ -1,3 +1,4 @@
+"use client";
 import TournamentCard from "@/components/TournamentCard";
 
 export default function Tournaments() {
