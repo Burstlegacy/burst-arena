@@ -28,7 +28,20 @@ export default function Home() {
             onClick={() => playSound(sounds.click)}
             className="bg-red-600 px-6 py-3 rounded-xl"
           >
-            ⚔️ Play Now
+            import Link from "next/link";
+
+<Link href="/play">
+  <button style={{
+    background: "#ef4444",
+    padding: "12px 20px",
+    borderRadius: "8px",
+    border: "none",
+    color: "white",
+    cursor: "pointer"
+  }}>
+    ⚔️ Play Now
+  </button>
+</Link>
           </motion.button>
         </div>
       </motion.div>
