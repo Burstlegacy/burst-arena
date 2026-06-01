@@ -17,12 +17,11 @@ export default function Navbar() {
       </h1>
 
       <div style={{ display: "flex", gap: "20px" }}>
-        /playPlay</Link>
+        <Link href="/play">⚔️ Play</Link>
         <Link href="/tournaments">🏆 Tournaments</Link>
-        /leaderboardLeaderboard</Link>
-        /settingsSettings</Link>
+        <Link href="/leaderboard">🥊 Leaderboard</Link>
+        <Link href="/settings">⚙️ Settings</Link>
       </div>
     </div>
   );
 }
-``
