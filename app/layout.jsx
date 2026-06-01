@@ -9,7 +9,12 @@ export default function Layout({ children }) {
 
   return (
     <html>
-      <body className="bg-[#0A0A0A] text-white">
+      <body style={{
+  backgroundColor: "#0A0A0A",
+  color: "white",
+  fontFamily: "Arial, sans-serif",
+  margin: 0
+}}>
         <Navbar />
 
         <AnimatePresence mode="wait">
