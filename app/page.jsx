@@ -20,7 +20,12 @@ export default function Home() {
 <div style={{ marginTop: "40px" }}>
   <h2>🔴 Live Stream Test</h2>
 
-  https://player.twitch.tv/?channel=riotgames&parent=burst-arena-vw2s.vercel.app</iframe>
+  <iframe
+    src="https://player.twitch.tv/?channel=riotgames&parent=burst-arena-vw2s.vercel.app"
+    height="400"
+    width="100%"
+    allowFullScreen
+  ></iframe>
 </div>
         
         <p style={{ color: "#aaa", marginBottom: "20px" }}>
