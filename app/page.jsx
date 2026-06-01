@@ -30,13 +30,17 @@ export default function Home() {
       </div>
 
       {/* STREAM */}
-      <div style={{ marginTop: "30px" }}>
-        <h2>🔴 Live</h2>
+     <div style={{ marginTop: "30px" }}>
+  <h2>🔴 Live</h2>
 
-        https://player.twitch.tv/?channel=burstlegacy&parent=burst-arena-vw2s.vercel.app&parent=vercel.app></iframe>
-      </div>
-
-    </div>
+  <iframe
+    src="https://player.twitch.tv/?channel=burstlegacy&parent=burst-arena-vw2s.vercel.app&parent=vercel.app"
+    height="400"
+    width="100%"
+    allowFullScreen={true}
+    style={{ borderRadius: "10px", border: "none" }}
+  ></iframe>
+</div>
   );
 }
 
