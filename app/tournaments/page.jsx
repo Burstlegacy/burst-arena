@@ -1,15 +1,31 @@
-"use client";
-import TournamentCard from "@/components/TournamentCard";
-
 export default function Tournaments() {
   return (
-    <div className="p-8">
-      <h1 className="text-2xl">Tournaments</h1>
+    <div>
+      <h1 style={{ marginBottom: "20px" }}>
+        🏆 Tournaments
+      </h1>
 
-      <div className="grid grid-cols-2 gap-4 mt-4">
-        <TournamentCard title="Weekly Cup" game="MTG" />
-        <TournamentCard title="Arena League" game="EAFC" />
+      <div style={{
+        display: "grid",
+        gridTemplateColumns: "repeat(2, 1fr)",
+        gap: "20px"
+      }}>
+
+        <div style={card}>
+          Commander Clash
+        </div>
+
+        <div style={card}>
+          EAFC Cup
+        </div>
+
       </div>
     </div>
   );
 }
+
+const card = {
+  background: "#161616",
+  padding: "20px",
+  borderRadius: "10px"
+};
