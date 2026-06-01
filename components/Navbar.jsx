@@ -7,18 +7,22 @@ export default function Navbar() {
     <div style={{
       display: "flex",
       justifyContent: "space-between",
-      padding: "16px",
+      alignItems: "center",
+      padding: "16px 40px",
       background: "#111",
-      color: "white"
+      borderBottom: "1px solid #222"
     }}>
-      <h1 style={{ color: "#ef4444" }}>🔥 Burst Arena</h1>
+      <h1 style={{ color: "#ef4444", fontSize: "20px" }}>
+        🔥 Burst Arena
+      </h1>
 
-      <div style={{ display: "flex", gap: "15px" }}>
-        <Link href="/play">Play</Link>
-        <Link href="/tournaments">Tournaments</Link>
-        <Link href="/leaderboard">Leaderboard</Link>
-        <Link href="/settings">Settings</Link>
+      <div style={{ display: "flex", gap: "20px" }}>
+        /playPlay</Link>
+        <Link href="/tournaments">🏆 Tournaments</Link>
+        /leaderboardLeaderboard</Link>
+        /settingsSettings</Link>
       </div>
     </div>
   );
 }
+``
