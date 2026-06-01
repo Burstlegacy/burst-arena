@@ -30,11 +30,12 @@ export default function Home() {
         <h2>🔴 Live Stream</h2>
 
         <iframe
-          src="https://player.twitch.tv/?channel=riotgames&parent=burst-arena-vw2s.vercel.app"
-          height="400"
-          width="100%"
-          allowFullScreen
-        ></iframe>
+  src="https://player.twitch.tv/?channel=riotgames&parent=burst-arena-vw2s.vercel.app"
+  height="400"
+  width="100%"
+  allowFullScreen
+></iframe>
+
       </div>
 
     </div>
