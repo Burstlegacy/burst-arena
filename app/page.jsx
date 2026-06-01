@@ -66,7 +66,19 @@ export default function Home() {
           onClick={() => playSound(sounds.matchFound)}
           className="bg-red-600 px-8 py-4 rounded-xl"
         >
-          ⚔️ Find Match
+          <Link href="/play">
+  <button style={{
+    background: "#9333ea",
+    padding: "14px 24px",
+    borderRadius: "10px",
+    border: "none",
+    color: "white",
+    cursor: "pointer"
+  }}>
+    ⚔️ Find Match
+  </button>
+</Link>
+``
         </motion.button>
       </div>
 
