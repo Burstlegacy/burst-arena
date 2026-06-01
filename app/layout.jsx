@@ -1,5 +1,6 @@
 "use client";
 
+import "./globals.css";
 import { AnimatePresence, motion } from "framer-motion";
 import { usePathname } from "next/navigation";
 import Navbar from "@/components/Navbar";
