@@ -17,15 +17,10 @@ export default function Home() {
         </h1>
 
         {/* TWITCH STREAM */}
-<div style={{ marginTop: "40px", textAlign: "center" }}>
-  <h2 style={{ marginBottom: "10px" }}>🔴 Live Stream</h2>
+<div style={{ marginTop: "40px" }}>
+  <h2>🔴 Live Stream Test</h2>
 
-  <iframe
-    src="https://player.twitch.tv/?channel=burstlegacy&parent=burst-arena-vw2s.vercel.app"
-    height="400"
-    width="100%"
-    allowFullScreen
-  ></iframe>
+  https://player.twitch.tv/?channel=riotgames&parent=burst-arena-vw2s.vercel.app</iframe>
 </div>
         
         <p style={{ color: "#aaa", marginBottom: "20px" }}>
