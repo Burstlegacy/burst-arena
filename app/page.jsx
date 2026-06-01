@@ -13,7 +13,7 @@ export default function Home() {
           color: "#ef4444",
           marginBottom: "10px"
         }}>
-          🔥 Burst Arena
+          🔥 Burst Arena TEST 123
         </h1>
 
         {/* TWITCH STREAM */}
