@@ -1,101 +1,68 @@
 "use client";
 
 import Link from "next/link";
-import { motion } from "framer-motion";
-import TournamentCard from "@/components/TournamentCard";
-import { sounds, playSound } from "@/lib/sounds";
 
 export default function Home() {
   return (
-    <main className="p-6">
-
+    <div style={{ padding: "40px", maxWidth: "1200px", margin: "0 auto" }}>
+      
       {/* HERO */}
-      <motion.div
-        initial={{ opacity: 0, y: 40 }}
-        animate={{ opacity: 1, y: 0 }}
-        className="text-center"
-      >
-        <h1 className="text-5xl text-red-500 font-bold">
+      <div style={{ textAlign: "center", marginBottom: "40px" }}>
+        <h1 style={{
+          fontSize: "48px",
+          color: "#ef4444",
+          marginBottom: "10px"
+        }}>
           🔥 Burst Arena
         </h1>
 
-        <p className="text-gray-400">
+        <p style={{ color: "#aaa", marginBottom: "20px" }}>
           Enter the Arena. Compete. Dominate.
         </p>
 
-        <div className="mt-6 flex justify-center gap-4">
-          <motion.button
-            whileHover={{ scale: 1.1 }}
-            onClick={() => playSound(sounds.click)}
-            className="bg-red-600 px-6 py-3 rounded-xl"
-          >
-            import Link from "next/link";
-
-<Link href="/play">
-  <button style={{
-    background: "#ef4444",
-    padding: "12px 20px",
-    borderRadius: "8px",
-    border: "none",
-    color: "white",
-    cursor: "pointer"
-  }}>
-    ⚔️ Play Now
-  </button>
-</Link>
-          </motion.button>
-        </div>
-      </motion.div>
-
-      {/* STREAM */}
-      <div className="mt-10">
-        <h2>🔴 Live Stream</h2>
-
-        <iframe
-          src="https://player.twitch.tv/?channel=burstlegacy&parent=localhost"
-          className="w-full h-[400px] rounded-xl"
-        />
+        /play
+          <button style={styles.primaryButton}>
+            ⚔️ Play Now
+          </button>
+        </Link>
       </div>
 
       {/* TOURNAMENTS */}
-      <div className="mt-10">
-        <h2>🏆 Tournaments</h2>
+      <section style={{ marginBottom: "40px" }}>
+        <h2 style={styles.sectionTitle}>🏆 Featured Tournaments</h2>
 
-        <div className="grid grid-cols-2 gap-4">
-          <TournamentCard title="Commander Chaos" game="MTG" />
-          <TournamentCard title="EAFC Cup" game="EAFC" />
+        <div style={styles.grid}>
+          <Card title="Commander Chaos" subtitle="MTG • Live" />
+          <Card title="EAFC Arena Cup" subtitle="EAFC • Starting Soon" />
         </div>
-      </div>
+      </section>
 
-      {/* MATCH BUTTON */}
-      <div className="mt-10 text-center">
-        <motion.button
-          animate={{
-            boxShadow: [
-              "0 0 10px rgba(225,29,72,0.3)",
-              "0 0 25px rgba(225,29,72,0.7)"
-            ]
-          }}
-          transition={{ repeat: Infinity, duration: 2 }}
-          onClick={() => playSound(sounds.matchFound)}
-          className="bg-red-600 px-8 py-4 rounded-xl"
-        >
-          <Link href="/play">
-  <button style={{
-    background: "#9333ea",
-    padding: "14px 24px",
-    borderRadius: "10px",
-    border: "none",
-    color: "white",
-    cursor: "pointer"
-  }}>
-    ⚔️ Find Match
-  </button>
-</Link>
-``
-        </motion.button>
-      </div>
+      {/* MATCHMAKING */}
+      <section style={{ textAlign: "center", marginBottom: "40px" }}>
+        <Link href="/play">
+          <button style={styles.bigButton}>
+            ⚔️ Find Match
+          </button>
+        </Link>
+      </section>
 
-    </main>
+      {/* LEADERBOARD */}
+      <section>
+        <h2 style={styles.sectionTitle}>🥊 Top Players</h2>
+
+        <div style={styles.card}>
+          <p>🏆 PlayerX — Champion</p>
+          <p>🥇 PlayerY — Gold</p>
+          <p>🥈 PlayerZ — Silver</p>
+        </div>
+      </section>
+
+    </div>
   );
 }
+
+/* COMPONENTS INLINE */
+
+function Card({ title, subtitle }) {
+  return (
+    <div style={styles.cardHover}>
