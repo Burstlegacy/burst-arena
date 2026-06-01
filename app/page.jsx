@@ -32,12 +32,13 @@ export default function Home() {
           Enter the Arena. Compete. Dominate.
         </p>
 
-        /play
-          <button style={styles.primaryButton}>
-            ⚔️ Play Now
-          </button>
-        </Link>
-      </div>
+       import Link from "next/link";
+
+<Link href="/play">
+  <button style={styles.primaryButton}>
+    ⚔️ Play Now
+  </button>
+</Link>
 
       {/* TOURNAMENTS */}
       <section style={{ marginBottom: "40px" }}>
