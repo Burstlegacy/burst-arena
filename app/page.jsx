@@ -63,24 +63,3 @@ export default function Home() {
 
   );
 }
-``
-
-
-/* STYLES */
-
-const card = {
-  background: "#161616",
-  padding: "20px",
-  borderRadius: "10px",
-  border: "1px solid #222"
-};
-
-const buttonPrimary = {
-  marginTop: "15px",
-  background: "#ef4444",
-  padding: "12px 20px",
-  borderRadius: "8px",
-  border: "none",
-  color: "white",
-  cursor: "pointer"
-};
